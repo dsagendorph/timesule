@@ -1,6 +1,6 @@
 # Timesule Project CSC 478 C. 
 Tile based 2D game
-
+Authors: Denise S., Malka L., Samson K., Mariana H. 
 
 ### How do I get set up? ###
 
