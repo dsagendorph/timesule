@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<!-- Timesule Game Main index html5 -->
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <link href="./app/css/timesule.css" rel="stylesheet" type="text/css"/>
+		
+		<!---took a shortcut and added help function here because you need it before the end of the page loads possibly --->
+		<script> let help=function(){
+			alert("Game Controls \nKeyboard Arrows used to move avatar \n← Moves avatar to the Left\n➔ Moves avatar to the Right\n ↑ Moves avatar Up\n↓ Moves avatar Down\nGame Objective\nTimesule is a three-level game\nGoal is to move avatar from the bottom row to the top row before time runs out"
+			+"\nLevel 1\n(Clock Start to count down from 15 Seconds)\nLevel 2\n(Clock Start to count down from 20 Seconds)\nLevel 3\n(Clock Start to count down from 45 Seconds)");	
+			}
+		</script>
+    </head>
+
+    <body>
+	<div class="thePage">
+		<P id="score" class="header"> Score: </p>
+		<p id="timer" class="header"> Level Timer: </p>
+		<button type="button" id="helpButton" onclick="help()">Help</button>
+		<p id="levelTitle" > Level </p>
+		
+        <div id="zoomThis" class="scale"/>
+        <!-- main Canvas -->
+		
+		<canvas id="gameboard" class="gameBorder" width="768"/>
+        
+		<!-- images for tiles -->
+		
+        <p class="surroundsTiles" id="direct">
+
+            <img id="tile-1.png" src="app/image/tile-1.png"/>
+            <img id="tile-2.png" src="app/image/tile-2.png"/>
+            <img id="tile-3.png" src="app/image/tile-3.png"/>
+            <img id="tile-4.png" src="app/image/tile-4.png"/>
+            <img id="tile-5.png" src="app/image/tile-5.png"/>
+            <img id="tile-6.png" src="app/image/tile-6.png"/>
+            <img id="tile-7.png" src="app/image/tile-7.png"/>
+            <img id="tile-8.png" src="app/image/tile-8.png"/>
+		
+		
+            <!-- images for avatar -->
+            <img id="character-l1.png" src="app/image/character-l1.png"/>
+            <img id="character-l2.png" src="app/image/character-l2.png"/>
+            <img id="character-r1.png" src="app/image/character-r1.png"/>
+            <img id="character-r2.png" src="app/image/character-r2.png"/>
+
+            <!-- audio files -->
+            <audio id="step.wav" src="app/sound/step.wav" type="audio/wav"></audio>
+            <audio id="tick.mp3" src="app/sound/tick.mp3" type="audio/wav"></audio>
+            <audio id="level-win.wav" src="app/sound/gameover.wav" type="audio/wav"></audio>
+            <audio id="gameover.wav" src="app/sound/gameover.wav" type="audio/wav"></audio>
+
+        </div>
+	</div>
+		
+        <!-- main app using browserify timesuleMain.js > timesuleMainBundle.js -->
+        <script type="text/javascript" src="timesuleMainBundle.js"></script>
+		
+
+    </body>
+
+</html>

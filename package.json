@@ -1,0 +1,12 @@
+{
+  "name"    : "Timesule",
+  "version" : "0.0.1",
+  "main"    : "timesuleMain.js",
+  "devDependencies": {
+    "electron": "^1.4.15",
+    "electron-packager": "^8.5.1",
+    "require" : "^2.4.20",
+    "browserify" : "^14.3.0"
+  }
+
+}
